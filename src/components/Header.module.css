@@ -17,14 +17,14 @@
   justify-content: space-between;
 }
 
+/* Logo — ahora es un <Link> */
 .logo {
   display: flex;
   align-items: baseline;
   gap: 2px;
-  background: none;
-  border: none;
-  cursor: pointer;
   font-family: var(--font-display);
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .logoMain {
@@ -41,13 +41,14 @@
   letter-spacing: -0.5px;
 }
 
+/* Nav */
 .nav {
   display: flex;
   align-items: center;
   gap: 32px;
 }
 
-.nav a {
+.navLink {
   font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.3px;
@@ -56,8 +57,11 @@
   text-decoration: none;
 }
 
-.nav a:hover { color: #fff; }
+.navLink:hover  { color: #fff; }
 
+.navLinkActive  { color: #fff !important; }
+
+/* CTA button */
 .ctaBtn {
   background: var(--ft-coral) !important;
   color: #fff !important;
@@ -71,7 +75,23 @@
 
 .ctaBtn:hover { background: var(--ft-coral-dark) !important; }
 
+/* ── Tablet ── */
 @media (max-width: 768px) {
-  .inner { padding: 0 20px; }
-  .nav a:not(.ctaBtn) { display: none; }
+  .inner {
+    padding: 0 20px;
+    height: 60px;
+  }
+  .nav { gap: 16px; }
+  .navLink:not(.ctaBtn) { display: none; }
+  .logoMain,
+  .logoAccent { font-size: 16px; }
+}
+
+/* ── Móvil ── */
+@media (max-width: 480px) {
+  .inner { padding: 0 16px; height: 56px; }
+  .ctaBtn {
+    padding: 7px 14px !important;
+    font-size: 11px !important;
+  }
 }

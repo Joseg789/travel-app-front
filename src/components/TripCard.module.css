@@ -154,3 +154,48 @@
   background: var(--ft-coral);
   color: #fff;
 }
+
+/* ── Tablet ── */
+@media (max-width: 900px) {
+  .body {
+    padding: 14px 16px 16px;
+    gap: 8px;
+  }
+  .name {
+    font-size: 14px;
+  }
+  .priceAmount {
+    font-size: 18px;
+  }
+}
+
+/* ── Móvil grande ── */
+@media (max-width: 640px) {
+  .imgWrap {
+    aspect-ratio: 16/9;
+  }
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .cta {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    padding: 8px 14px;
+  }
+  .priceAmount {
+    font-size: 20px;
+  }
+}
+
+/* ── Móvil pequeño ── */
+@media (max-width: 360px) {
+  .body {
+    padding: 12px 14px 14px;
+  }
+  .meta {
+    font-size: 11px;
+  }
+}

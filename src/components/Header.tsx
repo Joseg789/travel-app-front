@@ -1,23 +1,42 @@
 import React from "react";
+import { Link, NavLink } from "react-router-dom";
 import styles from "./Header.module.css";
 
-interface Props {
-  onLogoClick: () => void;
-}
-
-const Header: React.FC<Props> = ({ onLogoClick }) => (
+const Header: React.FC = () => (
   <header className={styles.header}>
     <div className={styles.inner}>
-      <button className={styles.logo} onClick={onLogoClick}>
+      {/* Logo → vuelve al inicio */}
+      <Link to="/" className={styles.logo}>
         <span className={styles.logoMain}>World</span>
         <span className={styles.logoAccent}>Travel</span>
-      </button>
+      </Link>
+
       <nav className={styles.nav}>
-        <a href="#" onClick={onLogoClick}>Inicio</a>
-        <a href="#">Circuitos</a>
-        <a href="#">Ofertas</a>
-        <a href="#">Nosotros</a>
-        <a href="#" className={styles.ctaBtn}>Contacto</a>
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            isActive
+              ? `${styles.navLink} ${styles.navLinkActive}`
+              : styles.navLink
+          }
+        >
+          Inicio
+        </NavLink>
+
+        {/* Estos links todavía no tienen ruta real: los dejamos como anclas */}
+        <a href="#circuitos" className={styles.navLink}>
+          Circuitos
+        </a>
+        <a href="#ofertas" className={styles.navLink}>
+          Ofertas
+        </a>
+        <a href="#nosotros" className={styles.navLink}>
+          Nosotros
+        </a>
+
+        <a href="#contacto" className={`${styles.navLink} ${styles.ctaBtn}`}>
+          Contacto
+        </a>
       </nav>
     </div>
   </header>
