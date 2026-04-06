@@ -1,35 +1,99 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import styles from "./Header.module.css";
-import Logo from "../images/Diseño sin título (2).svg";
-interface Props {
-  onLogoClick: () => void;
-}
-const telefono = "34629656149";
-const mensaje = encodeURIComponent("Hola quiero saber mas de sus productos");
-const Header: React.FC<Props> = ({ onLogoClick }) => (
-  <header className={styles.header}>
-    <div className={styles.inner}>
-      <button className={styles.logo} onClick={onLogoClick}>
-        {/* <span className={styles.logoMain}>Friendly</span>
-        <span className={styles.logoAccent}>Trips</span> */}
-        <img src={Logo} alt="FrienlyTripsValencia" />
-      </button>
-      <nav className={styles.nav}>
-        <a href="#" onClick={onLogoClick}>
-          Inicio
-        </a>
-        <a href="#">Circuitos</a>
-        <a href="#">Ofertas</a>
-        <a href="#">Nosotros</a>
-        <a
-          href={`https://wa.me/${telefono}?text=${mensaje}`}
-          className={styles.ctaBtn}
+
+const NAV_LINKS = [
+  { to: "/", label: "Inicio", end: true },
+  { to: "/circuitos", label: "Circuitos", end: false },
+  { to: "/ofertas", label: "Ofertas", end: false },
+  { to: "/nosotros", label: "Nosotros", end: false },
+];
+
+const Header: React.FC = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  return (
+    <header className={styles.header}>
+      <div className={styles.inner}>
+        {/* Logo */}
+        <Link to="/" className={styles.logo} onClick={() => setMenuOpen(false)}>
+          <span className={styles.logoMain}>World</span>
+          <span className={styles.logoAccent}>Travel</span>
+        </Link>
+
+        {/* Desktop nav */}
+        <nav className={styles.nav}>
+          {NAV_LINKS.map(({ to, label, end }) => (
+            <NavLink
+              key={to}
+              to={to}
+              end={end}
+              className={({ isActive }) =>
+                isActive
+                  ? `${styles.navLink} ${styles.navLinkActive}  `
+                  : styles.navLink
+              }
+            >
+              {label}
+            </NavLink>
+          ))}
+          <NavLink
+            to="/contacto"
+            className={({ isActive }) =>
+              isActive
+                ? `${styles.navLink} ${styles.ctaBtn} ${styles.ctaBtnActive}`
+                : `${styles.navLink} ${styles.ctaBtn}`
+            }
+          >
+            Contacto
+          </NavLink>
+        </nav>
+
+        {/* Hamburger — solo móvil */}
+        <button
+          className={`${styles.hamburger} ${menuOpen ? styles.hamburgerOpen : ""}`}
+          onClick={() => setMenuOpen((o) => !o)}
+          aria-label="Menú"
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+      </div>
+
+      {/* Mobile menu */}
+      <div
+        className={`${styles.mobileMenu} ${menuOpen ? styles.mobileMenuOpen : ""}`}
+      >
+        {NAV_LINKS.map(({ to, label, end }) => (
+          <NavLink
+            key={to}
+            to={to}
+            end={end}
+            className={({ isActive }) =>
+              isActive
+                ? `${styles.mobileLink} ${styles.mobileLinkActive}`
+                : styles.mobileLink
+            }
+            onClick={() => setMenuOpen(false)}
+          >
+            {label}
+          </NavLink>
+        ))}
+        <NavLink
+          to="/contacto"
+          className={({ isActive }) =>
+            isActive
+              ? `${styles.mobileLink} ${styles.mobileLinkCta} ${styles.mobileLinkActive}`
+              : `${styles.mobileLink} ${styles.mobileLinkCta}`
+          }
+          onClick={() => setMenuOpen(false)}
         >
           Contacto
-        </a>
-      </nav>
-    </div>
-  </header>
-);
+        </NavLink>
+      </div>
+    </header>
+  );
+};
 
 export default Header;

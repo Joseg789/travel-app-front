@@ -3,7 +3,7 @@ import { Continente } from "../types";
 import { continenteMeta, CONTINENTES } from "../data/continentes";
 import { viajes } from "../data/viajes";
 import styles from "./ContinentCarousel.module.css";
-
+import { useWindowSize } from "../hooks/useWindowSize";
 interface Props {
   onSelect: (c: Continente) => void;
 }
@@ -11,14 +11,12 @@ interface Props {
 const ContinentCarousel: React.FC<Props> = ({ onSelect }) => {
   const trackRef = useRef<HTMLDivElement>(null);
   const [offset, setOffset] = useState(0);
-  const visible = 3;
+  const { width } = useWindowSize();
+  const visible = width >= 1024 ? 3 : width >= 768 ? 2 : 1;
 
-  const countFor = (c: string) =>
-    viajes.filter((v) => v.continente === c).length;
+  const countFor = (c: string) => viajes.filter((v) => v.continente === c).length;
   const minPriceFor = (c: string) => {
-    const prices = viajes
-      .filter((v) => v.continente === c && v.precioHabDoble)
-      .map((v) => v.precioHabDoble!);
+    const prices = viajes.filter((v) => v.continente === c && v.precioHabDoble).map((v) => v.precioHabDoble!);
     return prices.length ? Math.min(...prices) : null;
   };
 
@@ -36,11 +34,7 @@ const ContinentCarousel: React.FC<Props> = ({ onSelect }) => {
       <div className={styles.header}>
         <div className={styles.headerLeft}>
           <span className={styles.eyebrow}>Explora por continente</span>
-          <h2 className={styles.title}>
-            ¿A dónde quieres
-            <br />
-            <em>viajar?</em>
-          </h2>
+          <h2 className={styles.title}>¿A dónde quieres<br /><em>viajar?</em></h2>
         </div>
         <div className={styles.controls}>
           <button
@@ -80,12 +74,7 @@ const ContinentCarousel: React.FC<Props> = ({ onSelect }) => {
                 onClick={() => onSelect(c as Continente)}
               >
                 <div className={styles.cardImgWrap}>
-                  <img
-                    src={meta.carouselImage}
-                    alt={meta.label}
-                    loading="lazy"
-                    className={styles.cardImg}
-                  />
+                  <img src={meta.carouselImage} alt={meta.label} loading="lazy" className={styles.cardImg} />
                   <div className={styles.cardOverlay} />
                   <span className={styles.cardEmoji}>{meta.emoji}</span>
                 </div>
@@ -93,9 +82,7 @@ const ContinentCarousel: React.FC<Props> = ({ onSelect }) => {
                   <div className={styles.cardMeta}>
                     <span className={styles.cardCount}>{count} destinos</span>
                     {minP && (
-                      <span className={styles.cardPrice}>
-                        desde {minP.toLocaleString("es-ES")} €
-                      </span>
+                      <span className={styles.cardPrice}>desde {minP.toLocaleString("es-ES")} €</span>
                     )}
                   </div>
                   <h3 className={styles.cardName}>{meta.label}</h3>
@@ -111,16 +98,14 @@ const ContinentCarousel: React.FC<Props> = ({ onSelect }) => {
       </div>
 
       <div className={styles.dots}>
-        {Array.from({ length: CONTINENTES.length - visible + 1 }).map(
-          (_, i) => (
-            <button
-              key={i}
-              className={`${styles.dot} ${i === offset ? styles.dotActive : ""}`}
-              onClick={() => setOffset(i)}
-              aria-label={`Ir a posición ${i + 1}`}
-            />
-          ),
-        )}
+        {Array.from({ length: CONTINENTES.length - visible + 1 }).map((_, i) => (
+          <button
+            key={i}
+            className={`${styles.dot} ${i === offset ? styles.dotActive : ""}`}
+            onClick={() => setOffset(i)}
+            aria-label={`Ir a posición ${i + 1}`}
+          />
+        ))}
       </div>
     </section>
   );

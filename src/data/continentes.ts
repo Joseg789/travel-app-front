@@ -7,7 +7,8 @@ export const continenteMeta: Record<string, ContinenteInfo> = {
     description:
       "Desde los fiordos noruegos hasta las playas mediterráneas, Europa despliega siglos de historia, arquitectura monumental y gastronomía irresistible en cada esquina.",
     heroImage:
-      "https://images.unsplash.com/photo-1471874708586-a6a5b1af35b4?w=1600&q=80",
+      //"https://images.unsplash.com/photo-1471874708586-a6a5b1af35b4?w=1600&q=80",
+      "https://images.unsplash.com/photo-1608817576203-3c27ed168bd2?q=80&w=5504",
     carouselImage:
       "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=800&q=75",
     accentColor: "#3a7bd5",
@@ -60,11 +61,11 @@ export const destinoImages: Record<string, string> = {
   Austria:
     "https://images.unsplash.com/photo-1516550893923-42d28e5677af?w=600&q=70",
   "Bretaña y Normandía":
-    "https://images.unsplash.com/photo-1531250552633-528fe896fdd4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bm9ybWFuZGlhfGVufDB8fDB8fHww",
+    "https://images.unsplash.com/photo-1546512970-372b2be5a667?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bm9ybWFuZGlhfGVufDB8fDB8fHww",
   "Croacia y Eslovenia":
-    "https://images.unsplash.com/photo-1520900828798-002c1800f31a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZXNsb3ZlbmlhfGVufDB8fDB8fHww",
+    "https://images.unsplash.com/photo-1587632478929-c7b203655b25?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8ZXNsb3ZlbmlhfGVufDB8fDB8fHww",
   "Croacia, Bosnia y Eslovenia":
-    "https://images.unsplash.com/photo-1575540291670-8d3b26f7d327?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y3JvYWNpYXxlbnwwfHwwfHx8MA%3D%3D",
+    "https://images.unsplash.com/photo-1555990793-da11153b2473?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y3JvYWNpYXxlbnwwfHwwfHx8MA%3D%3D",
   "Escocia y Tierras Altas":
     "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=70",
   "Eslovenia, Istria y Véneto":
@@ -80,7 +81,7 @@ export const destinoImages: Record<string, string> = {
   Madeira:
     "https://images.unsplash.com/photo-1594498653385-d5172c532c00?w=600&q=70",
   "Múnich, Praga y Berlín":
-    "https://images.unsplash.com/photo-1611693088055-f20ef834328a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bXVuaWNofGVufDB8fDB8fHww",
+    "https://images.unsplash.com/photo-1592906209472-a36b1f3782ef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHByYWdhfGVufDB8fDB8fHww",
   "Norte de Italia, Lagos y Véneto":
     "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=600&q=70",
   "Países Bajos":
@@ -90,7 +91,7 @@ export const destinoImages: Record<string, string> = {
   Polonia:
     "https://images.unsplash.com/photo-1519197924294-4ba991a11128?w=600&q=70",
   Portugal:
-    "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=600&q=70",
+    "https://images.unsplash.com/photo-1569959220744-ff553533f492?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cG9ydHVnYWx8ZW58MHx8MHx8fDA%3D",
   "Praga y Budapest":
     "https://images.unsplash.com/photo-1541849546-216549ae216d?w=600&q=70",
   "Rumanía Histórica":
@@ -111,11 +112,11 @@ export const destinoImages: Record<string, string> = {
   Camboya:
     "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=600&q=70",
   "Corea del Sur":
-    "https://images.unsplash.com/photo-1583833008338-31a6657917ab?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1485186337913-a42c84d7ffcc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fGNvcmVhJTIwZGVsJTIwc3VyfGVufDB8fDB8fHww",
   "India — Festival Diwali":
     "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=600&q=70",
   "India — Triángulo Dorado":
-    "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=600&q=70",
+    "https://images.unsplash.com/photo-1773574995919-aaf51e05f9e4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aW5kaWElMjBmZXN0aXZhbCUyMHRyaWFuZ3VsbyUyMGRvcmFkb3xlbnwwfHwwfHx8MA%3D%3D",
   "Indonesia — Bali":
     "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600&q=70",
   "Japón Espectacular":
@@ -125,7 +126,7 @@ export const destinoImages: Record<string, string> = {
   "Japón Matsumoto":
     "https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?w=600&q=70",
   "Ruta de la Seda — Uzbekistán":
-    "https://images.unsplash.com/photo-1705077016239-1fd62735562d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHJ1dGElMjBkZSUyMGxhJTIwc2VkYSUyMHVzYmVraXN0YW58ZW58MHx8MHx8fDA%3D",
+    "https://images.unsplash.com/photo-1725635395229-92c5afe516bd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHJ1dGElMjBkZSUyMGxhJTIwc2VkYSUyMHVzYmVraXN0YW58ZW58MHx8MHx8fDA%3D",
   Tailandia:
     "https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?w=600&q=70",
   Turquía:
@@ -147,28 +148,28 @@ export const destinoImages: Record<string, string> = {
   "Tanzania y Zanzíbar":
     "https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=600&q=70",
   Túnez:
-    "https://images.unsplash.com/photo-1527474305487-b87b222841cc?w=600&q=70",
+    "https://images.unsplash.com/photo-1533105079780-92b9be482077?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dHVuZXp8ZW58MHx8MHx8fDA%3D",
   Zanzíbar:
-    "https://images.unsplash.com/photo-1621583628955-42fbc37bf424?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8emFuemliYXJ8ZW58MHx8MHx8fDA%3D",
+    "https://images.unsplash.com/photo-1688134947563-b8eb24f9c0d8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHphbnppYmFyfGVufDB8fDB8fHww",
 
   // AMERICA
   Canadá:
     "https://images.unsplash.com/photo-1503614472-8c93d56e92ce?w=600&q=70",
   Colombia:
-    "https://images.unsplash.com/photo-1518639192441-8fce0a366e2e?w=600&q=70",
+    "https://images.unsplash.com/photo-1715503486591-39e62f58a7b3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fGNhcnRhZ2VuYSUyMGRlJTIwaW5kaWFzfGVufDB8fDB8fHww",
   "Costa Rica — Guanacaste":
-    "https://images.unsplash.com/photo-1643400814192-381f57499b42?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fENvc3RhJTIwUmljYSUyMCVFMiU4MCU5NCUyMEd1YW5hY2FzdGV8ZW58MHx8MHx8fDA%3D",
+    "https://images.unsplash.com/photo-1595963178022-98bafc4dd550?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDN8fGNvc3RhJTIwcmljYXxlbnwwfHwwfHx8MA%3D%3D",
   "Costa Rica — Manuel Antonio":
-    "https://images.unsplash.com/photo-1536708952035-0a982a1a1984?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Q29zdGElMjBSaWNhJTIwJUUyJTgwJTk0JTIwbWFudWVsJTIwYW50b25pb3xlbnwwfHwwfHx8MA%3D%3D",
+    "https://images.unsplash.com/photo-1586640866012-8273df34e593?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y29zdGElMjByaWNhfGVufDB8fDB8fHww",
   Perú: "https://images.unsplash.com/photo-1526392060635-9d6019884377?w=600&q=70",
   "Perú — Montaña Arcoíris":
-    "https://images.unsplash.com/photo-1476231682828-37e571bc172f?w=600&q=70",
+    "https://images.unsplash.com/photo-1545330785-15356daae141?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVydXxlbnwwfHwwfHx8MA%3D%3D",
   "Perú Mágico":
     "https://images.unsplash.com/photo-1526392060635-9d6019884377?w=600&q=70",
   "Riviera Maya":
-    "https://images.unsplash.com/photo-1606848685862-e165a7b69ac5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzZ8fHJpdmVyYSUyMG1heWF8ZW58MHx8MHx8fDA%3D",
+    "https://images.unsplash.com/photo-1548623826-a1aa0a4d8a5b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHR1bHVtfGVufDB8fDB8fHww",
   "Punta Cana":
-    "https://images.unsplash.com/photo-1505738313577-5357ff512f16?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fHB1bnRhJTIwY2FuYXxlbnwwfHwwfHx8MA%3D%3D",
+    "https://images.unsplash.com/photo-1542397284385-6010376c5337?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHB1bnRhJTIwY2FuYXxlbnwwfHwwfHx8MA%3D%3D",
 };
 
 export const CONTINENTES = ["EUROPA", "ASIA", "AFRICA", "AMERICA"] as const;

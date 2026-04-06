@@ -1,6 +1,6 @@
 # WorldTravel 2026 — Catálogo de Viajes
 
-Aplicación React + TypeScript con carrusel de continentes y páginas de destinos,
+Aplicación React + TypeScript con carrusel de continentes y páginas de destinos, 
 inspirada en el estilo de **friendlytrips.es** y la arquitectura de **destinosdelmundo.es**.
 
 ## 🚀 Puesta en marcha
@@ -45,15 +45,15 @@ src/
 
 ## 🎨 Paleta de colores (FriendlyTrips)
 
-| Variable          | Valor     | Uso                    |
-| ----------------- | --------- | ---------------------- |
-| `--ft-navy`       | `#0d1f3c` | Fondo header/footer    |
-| `--ft-navy-light` | `#1a2e4a` | Elementos oscuros      |
-| `--ft-coral`      | `#e8875a` | Color acento principal |
-| `--ft-coral-dark` | `#c96d40` | Hover del coral        |
-| `--ft-coral-soft` | `#f5cbb8` | Fondos suaves coral    |
-| `--ft-cream`      | `#faf7f2` | Fondo general          |
-| `--ft-cream-dark` | `#f0ebe3` | Bordes y separadores   |
+| Variable           | Valor      | Uso                      |
+|--------------------|------------|--------------------------|
+| `--ft-navy`        | `#0d1f3c`  | Fondo header/footer      |
+| `--ft-navy-light`  | `#1a2e4a`  | Elementos oscuros        |
+| `--ft-coral`       | `#e8875a`  | Color acento principal   |
+| `--ft-coral-dark`  | `#c96d40`  | Hover del coral          |
+| `--ft-coral-soft`  | `#f5cbb8`  | Fondos suaves coral      |
+| `--ft-cream`       | `#faf7f2`  | Fondo general            |
+| `--ft-cream-dark`  | `#f0ebe3`  | Bordes y separadores     |
 
 ---
 

@@ -1,57 +1,90 @@
-import React, { useState } from "react";
+import React from "react";
+import { Routes, Route, useNavigate, useParams } from "react-router-dom";
 import { Continente } from "./types";
+import { CONTINENTES } from "./data/continentes";
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
 import ContinentCarousel from "./components/ContinentCarousel";
 import ContinentPage from "./components/ContinentPage";
 import Footer from "./components/Footer";
+import CircuitosPage from "./pages/CircuitosPage";
+import OfertasPage from "./pages/OfertasPage";
+import NosotrosPage from "./pages/NosotrosPage";
+import ContactoPage from "./pages/ContactoPage";
 import "./index.css";
-// import WhatsappBtn from "./components/whatssappbtn";
-import Carousel from "./components/carouselNew";
 
-type View = { type: "home" } | { type: "continent"; continent: Continente };
+/* ─── Layout: Header + Footer siempre visibles ─── */
+const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+  <>
+    <Header />
+    <main>{children}</main>
+    <Footer />
+  </>
+);
 
-const App: React.FC = () => {
-  const [view, setView] = useState<View>({ type: "home" });
-
-  const handleSelectContinent = (c: Continente) => {
-    setView({ type: "continent", continent: c });
+/* ─── Página de inicio ─── */
+const HomePage: React.FC = () => {
+  const navigate = useNavigate();
+  const handleSelect = (c: Continente) => {
+    navigate(`/continente/${c.toLowerCase()}`);
     window.scrollTo({ top: 0, behavior: "instant" });
   };
-
-  const handleBack = () => {
-    setView({ type: "home" });
-    window.scrollTo({ top: 0, behavior: "instant" });
-  };
-
   return (
     <>
-      <Header onLogoClick={handleBack} />
-
-      {view.type === "home" && (
-        <main>
-          <HeroSection />
-          <Carousel onSelect={handleSelectContinent} />
-          <FeatureStrip />
-        </main>
-      )}
-
-      {view.type === "continent" && (
-        <main>
-          <ContinentPage
-            key={view.continent}
-            continent={view.continent}
-            onBack={handleBack}
-          />
-        </main>
-      )}
-      {/* <WhatsappBtn /> */}
-      <Footer />
+      <HeroSection />
+      <ContinentCarousel onSelect={handleSelect} />
+      <FeatureStrip />
     </>
   );
 };
 
-/* ── Small inline feature strip ── */
+/* ─── Página de continente ─── */
+const ContinentRoute: React.FC = () => {
+  const { slug } = useParams<{ slug: string }>();
+  const navigate = useNavigate();
+  const continent = CONTINENTES.find((c) => c.toLowerCase() === slug) as
+    | Continente
+    | undefined;
+  if (!continent) {
+    navigate("/", { replace: true });
+    return null;
+  }
+  return (
+    <ContinentPage
+      continent={continent}
+      onBack={() => {
+        navigate("/");
+        window.scrollTo({ top: 0, behavior: "instant" });
+      }}
+    />
+  );
+};
+
+/* ─── Scroll to top en cada cambio de ruta ─── */
+const ScrollToTop: React.FC = () => {
+  React.useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  });
+  return null;
+};
+
+/* ─── App ─── */
+const App: React.FC = () => (
+  <Layout>
+    <ScrollToTop />
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/continente/:slug" element={<ContinentRoute />} />
+      <Route path="/circuitos" element={<CircuitosPage />} />
+      <Route path="/ofertas" element={<OfertasPage />} />
+      <Route path="/nosotros" element={<NosotrosPage />} />
+      <Route path="/contacto" element={<ContactoPage />} />
+      <Route path="*" element={<HomePage />} />
+    </Routes>
+  </Layout>
+);
+
+/* ─── Feature strip ─── */
 const FEATURES = [
   {
     icon: "✈️",
@@ -76,47 +109,13 @@ const FEATURES = [
 ];
 
 const FeatureStrip: React.FC = () => (
-  <section
-    style={{
-      background: "var(--ft-navy)",
-      padding: "60px 60px",
-    }}
-  >
-    <div
-      style={{
-        maxWidth: 1280,
-        margin: "0 auto",
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-        gap: 32,
-      }}
-    >
+  <section className="feature-strip">
+    <div className="feature-strip__grid">
       {FEATURES.map(({ icon, title, desc }) => (
-        <div
-          key={title}
-          style={{ display: "flex", flexDirection: "column", gap: 10 }}
-        >
-          <span style={{ fontSize: 28 }}>{icon}</span>
-          <h3
-            style={{
-              fontFamily: "var(--font-display)",
-              fontSize: 15,
-              fontWeight: 700,
-              color: "#f5ede0",
-              letterSpacing: "-0.2px",
-            }}
-          >
-            {title}
-          </h3>
-          <p
-            style={{
-              fontSize: 13,
-              color: "rgba(255,255,255,0.5)",
-              lineHeight: 1.65,
-            }}
-          >
-            {desc}
-          </p>
+        <div key={title} className="feature-strip__item">
+          <span className="feature-strip__icon">{icon}</span>
+          <h3 className="feature-strip__title">{title}</h3>
+          <p className="feature-strip__desc">{desc}</p>
         </div>
       ))}
     </div>
