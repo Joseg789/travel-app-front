@@ -7,7 +7,7 @@ import {
   useHref,
 } from "react-router-dom";
 import { Continente } from "./types";
-import { CONTINENTES } from "./data/continentes";
+import { CONTINENTES } from "./data/continentes2";
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
 import ContinentCarousel from "./components/ContinentCarousel";

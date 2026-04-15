@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
-import { viajes } from "../data/viajes";
-import { destinoImages, CONTINENTES, continenteMeta } from "../data/continentes";
+import { viajes } from "../data/viajes2";
+import { destinoImages, CONTINENTES, continenteMeta } from "../data/continentes2";
 import { Continente, Tipologia } from "../types";
 import styles from "./CircuitosPage.module.css";
 
@@ -10,7 +10,8 @@ const FALLBACK = "https://images.unsplash.com/photo-1488085061387-422e29b40080?w
 const TIPO_LABEL: Record<string, string> = {
   plaza_a_plaza_en_grupo: "En grupo",
   cupo: "Cupo",
-  plaza_a_plaza: "A medida",
+  plaza_a_plaza: "En grupo",
+  viaje_dinamico: "A medida",
 };
 
 const CircuitosPage: React.FC = () => {

@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from "react";
 import { Continente, Tipologia } from "../types";
-import { continenteMeta } from "../data/continentes";
-import { viajes } from "../data/viajes";
+import { continenteMeta } from "../data/continentes2";
+import { viajes } from "../data/viajes2";
 import TripCard from "./TripCard";
 import styles from "./ContinentPage.module.css";
 

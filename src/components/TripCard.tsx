@@ -1,6 +1,6 @@
 import React from "react";
 import { Viaje } from "../types";
-import { destinoImages } from "../data/continentes";
+import { destinoImages } from "../data/continentes2";
 import styles from "./TripCard.module.css";
 
 const FALLBACK =

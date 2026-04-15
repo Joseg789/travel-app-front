@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import { useNavigate } from "react-router-dom";
-import { viajes } from "../data/viajes";
-import { destinoImages, continenteMeta } from "../data/continentes";
+import { viajes } from "../data/viajes2";
+import { destinoImages, continenteMeta } from "../data/continentes2";
 import styles from "./OfertasPage.module.css";
 
 const FALLBACK = "https://images.unsplash.com/photo-1488085061387-422e29b40080?w=600&q=70";
