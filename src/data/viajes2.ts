@@ -1,6 +1,6 @@
 import { Viaje } from "../types";
 
-export const viajes2: Viaje[] = [
+export const viajes: Viaje[] = [
   {
     continente: 'EUROPA',
     nombre: 'Albania, Macedonia del Norte y Grecia',

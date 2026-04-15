@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
-import { viajes } from "../data/viajes";
-import { destinoImages, CONTINENTES, continenteMeta } from "../data/continentes";
+import { viajes } from "../data/viajes2";
+import { destinoImages, CONTINENTES, continenteMeta } from "../data/continentes2";
 import { Continente, Tipologia } from "../types";
 import styles from "./CircuitosPage.module.css";
 

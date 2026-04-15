@@ -2,8 +2,8 @@
 // import useEmblaCarousel from "embla-carousel-react";
 // import Autoplay from "embla-carousel-autoplay";
 // import "./carouselNew.css";
-// import { viajes } from "../data/viajes";
-// import { continenteMeta, destinoImages } from "../data/continentes";
+// import { viajes } from "../data/viajes2";
+// import { continenteMeta, destinoImages } from "../data/continentes2";
 // import { Continente } from "../types";
 // interface Props {
 //   onSelect: (c: Continente) => void;
@@ -128,7 +128,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import "./carouselNew.css";
-import { continenteMeta, CONTINENTES } from "../data/continentes";
+import { continenteMeta, CONTINENTES } from "../data/continentes2";
 import { Continente } from "../types";
 
 interface Props {

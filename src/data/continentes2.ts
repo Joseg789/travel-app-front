@@ -1,6 +1,6 @@
 import { ContinenteInfo } from "../types";
 
-export const continenteMeta2: Record<string, ContinenteInfo> = {
+export const continenteMeta: Record<string, ContinenteInfo> = {
   EUROPA: {
     label: "Europa",
     tagline: "Historia, cultura y paisajes sin igual",
@@ -51,7 +51,7 @@ export const continenteMeta2: Record<string, ContinenteInfo> = {
   },
 };
 
-export const destinoImages2: Record<string, string> = {
+export const destinoImages: Record<string, string> = {
   // EUROPA - Nuevos destinos
   "Albania, Macedonia del Norte y Grecia":
     "https://images.unsplash.com/photo-1460749411175-04ec1b36cd0f?w=600&q=70",
@@ -210,3 +210,5 @@ export const destinoImages2: Record<string, string> = {
   "Punta cana":
     "https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?w=600&q=70",
 };
+
+export const CONTINENTES = ["EUROPA", "ASIA", "AFRICA", "AMERICA"] as const;

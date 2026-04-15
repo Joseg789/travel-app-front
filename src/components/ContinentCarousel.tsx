@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { Continente } from "../types";
-import { continenteMeta, CONTINENTES } from "../data/continentes";
-import { viajes } from "../data/viajes";
+import { continenteMeta, CONTINENTES } from "../data/continentes2";
+import { viajes } from "../data/viajes2";
 import styles from "./ContinentCarousel.module.css";
 import { useWindowSize } from "../hooks/useWindowSize";
 interface Props {
